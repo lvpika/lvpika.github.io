@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lvpika.github.io/"/>
-  <updated>2020-03-22T13:25:42.266Z</updated>
+  <updated>2020-03-22T14:00:43.174Z</updated>
   <id>http://lvpika.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://lvpika.github.io/2020/03/22/Hexo%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/"/>
     <id>http://lvpika.github.io/2020/03/22/Hexo%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</id>
     <published>2020-03-22T13:15:25.000Z</published>
-    <updated>2020-03-22T13:25:42.266Z</updated>
+    <updated>2020-03-22T14:00:43.174Z</updated>
     
     <content type="html"><![CDATA[<h2 id="在编写Hexo博客文章的时候插入图片"><a href="#在编写Hexo博客文章的时候插入图片" class="headerlink" title="在编写Hexo博客文章的时候插入图片"></a>在编写Hexo博客文章的时候插入图片</h2><ol><li><p>如果用图床的链接之类的是不显示的</p></li><li><p>我百度到的一个解决办法，就是安装一个hexo插件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https:&#x2F;&#x2F;github.com&#x2F;CodeFalling&#x2F;hexo-asset-image -- save</span><br></pre></td></tr></table></figure></li><li><p>然后修改Hexo的配置文件，将 post_asset_folder 的键值改为 true </p></li><li><p>然后在执行 hexo new 创建文章的时候，刚安装的插件会在目录下创建按一个同名的文件夹，你把要放在文章中的图片放在这个文件夹中，然后在文章中 调用图片即可 调用图片的语法如下，注意图片名字要加上后缀名</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图片名字]</span><br></pre></td></tr></table></figure></li></ol><h5 id="然后就没有了"><a href="#然后就没有了" class="headerlink" title="然后就没有了"></a>然后就没有了</h5>]]></content>
     
