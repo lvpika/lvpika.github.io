@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lvpika.github.io/"/>
-  <updated>2020-03-22T14:00:43.174Z</updated>
+  <updated>2020-03-25T03:43:59.224Z</updated>
   <id>http://lvpika.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>证书的有效性认证原理</title>
+    <link href="http://lvpika.github.io/2020/03/25/%E8%AF%81%E4%B9%A6%E7%9A%84%E6%9C%89%E6%95%88%E6%80%A7%E8%AE%A4%E8%AF%81%E5%8E%9F%E7%90%86/"/>
+    <id>http://lvpika.github.io/2020/03/25/%E8%AF%81%E4%B9%A6%E7%9A%84%E6%9C%89%E6%95%88%E6%80%A7%E8%AE%A4%E8%AF%81%E5%8E%9F%E7%90%86/</id>
+    <published>2020-03-25T03:42:45.000Z</published>
+    <updated>2020-03-25T03:43:59.224Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="证书的有效性认证原理"><a href="#证书的有效性认证原理" class="headerlink" title="证书的有效性认证原理"></a>证书的有效性认证原理</h2><ol><li>用户访问某个网站，和网站建立连接</li><li>网站主动将CA颁发给它的证书发送给用户</li><li>用户用CA认证中心的公钥解密证书，能够正常解密，查看到网站的基本信息，即说明网站可信</li></ol><h2 id="认证证书的原理"><a href="#认证证书的原理" class="headerlink" title="认证证书的原理"></a>认证证书的原理</h2><ol><li>首先由三个角色<br> (1). 第一个是CA认证中心，相当于公安局<br> (2). 第二个是网站服务器，也是证书申请者<br> (3). 第三个是网站用户<h4 id="CA认证中心的作用"><a href="#CA认证中心的作用" class="headerlink" title="CA认证中心的作用"></a>CA认证中心的作用</h4></li><li>相当于公安局，给申请者办法证书<h4 id="申请者申请证书和CA认证中心颁发证书的过程-（相当于办身份证的过程）"><a href="#申请者申请证书和CA认证中心颁发证书的过程-（相当于办身份证的过程）" class="headerlink" title="申请者申请证书和CA认证中心颁发证书的过程 （相当于办身份证的过程）"></a>申请者申请证书和CA认证中心颁发证书的过程 （相当于办身份证的过程）</h4></li><li>申请者首先生成一个证书请求文件，然后将这俄格文件发送给CA认证中心，这个文件包含了，网站的国家，省份，城市，县，单位，部门，主机名，邮箱，等。这些信息就相当于户口本。</li><li>CA认证中心收到请求文件过后，首先会去考察，文件中的信息是否属实，也就是说，请求文件中那些信息是否属实，如果属实。</li><li>CA认证中心就用自己的私钥对申请者发来的请求文件进行加密。</li><li>然后将加密过后的请求文件发还给申请者，这个文件也就是证书。</li></ol><h4 id="为什么CA认证中心要用私钥对请求文件加密呢"><a href="#为什么CA认证中心要用私钥对请求文件加密呢" class="headerlink" title="为什么CA认证中心要用私钥对请求文件加密呢"></a>为什么CA认证中心要用私钥对请求文件加密呢</h4><ol><li>因为私钥加密的文件只能用和它相匹配的公钥解开，当CA认证中心成立的时候，就会生成一对密钥，也就是私钥和公钥，比较权威的CA认证机构的公钥，都已经内嵌在windows系统中，用户收到这个网站的证书的时候如果用CA的公钥能够解开，说明这个证书没有被纂改过，如果解不开就说明，这个证书不是被CA认证中心的私钥加密的证书，所以不可信，因为CA认证中心就相当于公安局，人们都相信它。也就是，如果在证书传送的过程中，被别人劫持并且用CA认证中心的公钥解开纂改了数据，它也没有办法用CA认证中心的私钥重新对数据进行加密，所以就算它将纂改后的证书文件发送给用户，用户无法解开，也就不会相信被纂改后的数据。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;证书的有效性认证原理&quot;&gt;&lt;a href=&quot;#证书的有效性认证原理&quot; class=&quot;headerlink&quot; title=&quot;证书的有效性认证原理&quot;&gt;&lt;/a&gt;证书的有效性认证原理&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;用户访问某个网站，和网站建立连接&lt;/li&gt;
+&lt;li&gt;网站主动将C
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Linux，CA" scheme="http://lvpika.github.io/tags/Linux%EF%BC%8CCA/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo博客文章中插入图片</title>
