@@ -2,30 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://lvpika.github.io/2020/03/22/Hexo%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</loc>
+    
+    <lastmod>2020-03-25T04:17:29.498Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://lvpika.github.io/2020/03/25/%E8%AF%81%E4%B9%A6%E7%9A%84%E6%9C%89%E6%95%88%E6%80%A7%E8%AE%A4%E8%AF%81%E5%8E%9F%E7%90%86/</loc>
     
-    <lastmod>2020-03-25T03:43:59.224Z</lastmod>
+    <lastmod>2020-03-25T04:17:11.004Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://lvpika.github.io/2020/03/22/Github-hexo%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
     
-    <lastmod>2020-03-22T14:28:10.009Z</lastmod>
+    <lastmod>2020-03-25T04:16:53.234Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://lvpika.github.io/2020/03/22/Hexo%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</loc>
+    <loc>http://lvpika.github.io/about/index.html</loc>
     
-    <lastmod>2020-03-22T14:00:43.174Z</lastmod>
+    <lastmod>2020-03-25T04:02:43.733Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://lvpika.github.io/2020/03/22/%E5%85%B3%E4%BA%8E/</loc>
+    <loc>http://lvpika.github.io/link/index.html</loc>
     
-    <lastmod>2020-03-22T10:01:28.753Z</lastmod>
+    <lastmod>2020-03-25T03:58:29.844Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lvpika.github.io/tags/index.html</loc>
+    
+    <lastmod>2020-03-25T03:58:12.275Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lvpika.github.io/categories/index.html</loc>
+    
+    <lastmod>2020-03-25T03:55:32.484Z</lastmod>
     
   </url>
   
