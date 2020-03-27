@@ -89,16 +89,25 @@ function activateLightMode(){
     int[] a1 = {1,2,3,4,5,6};   //这种方式称作：静态初始化
     int a1[] = {1,2,3,4,5,6};   //也支持这种方式，但是上面一种好看些</code></pre><h4 id="取得数组中某一个元素"><a href="#取得数组中某一个元素" class="headerlink" title="取得数组中某一个元素"></a>取得数组中某一个元素</h4><pre><code>System.out.println(a1[0]);
 打印数组中第一个数</code></pre><h4 id="遍历一维数组"><a href="#遍历一维数组" class="headerlink" title="遍历一维数组"></a>遍历一维数组</h4><pre><code>使用 for循环
-for(i=0;i&lt;a1.length;i++){ System.out.println(a1[i]); }</code></pre><h4 id="修改某个元素的值"><a href="#修改某个元素的值" class="headerlink" title="修改某个元素的值"></a>修改某个元素的值</h4><pre><code>a1[1] =  1000;</code></pre><h2 id="数组的内存分析"><a href="#数组的内存分析" class="headerlink" title="数组的内存分析"></a>数组的内存分析</h2><pre><code>1. 数组的引用中存储的是数组首元素在堆内存中的地址，也就是数组那首元素的内存地址作为数对象的内存地址
-2. 数组中每一个元素都有下标（索引），从0开始，任何一个数组都有一个length属性用来获取数组中元素的个数（也是数组长度），数组中最后一个元素的下标就是，数组长度-1
-3. 数组通过元素的下标获取元素
-    (1) 取得第一个元素：数组名[0]
-    (2) 取得最后一个元素：数组名[数组名.length-1]
-4. 数组的优点：查找效率高
-5. 数组缺点：队医的增删元素效率低
-
-6. 以下是数组的内存图（省略了方法区内存）
-![arry.png]</code></pre><h3 id="注意：有100个元素的数组和有10000个元素的数组查找数据的效率是差不多的"><a href="#注意：有100个元素的数组和有10000个元素的数组查找数据的效率是差不多的" class="headerlink" title="注意：有100个元素的数组和有10000个元素的数组查找数据的效率是差不多的"></a>注意：有100个元素的数组和有10000个元素的数组查找数据的效率是差不多的</h3><pre><code>1. 因为 数组存储的数据类型都是一样的，内存空间大小也就一样，然后数组的存储又是有顺序的，所以只要知道第一个元素的内存地址和下标，在知道要查找元素的下标，在用下标计算出和第一个元素的偏移量，在由某个算法用偏移量就可以计算出要查找的数据的内存地址，然后就可以直接通过内存地址定位到那个元素</code></pre><h2 id="动态初始化一维数组"><a href="#动态初始化一维数组" class="headerlink" title="动态初始化一维数组"></a>动态初始化一维数组</h2><pre><code>1. 语法
+for(i=0;i&lt;a1.length;i++){ System.out.println(a1[i]); }</code></pre><h4 id="修改某个元素的值"><a href="#修改某个元素的值" class="headerlink" title="修改某个元素的值"></a>修改某个元素的值</h4><pre><code>a1[1] =  1000;</code></pre><h2 id="数组的内存分析"><a href="#数组的内存分析" class="headerlink" title="数组的内存分析"></a>数组的内存分析</h2><ol>
+<li><p>数组的引用中存储的是数组首元素在堆内存中的地址，也就是数组那首元素的内存地址作为数对象的内存地址</p>
+</li>
+<li><p>数组中每一个元素都有下标（索引），从0开始，任何一个数组都有一个length属性用来获取数组中元素的个数（也是数组长度），数组中最后一个元素的下标就是，数组长度-1</p>
+</li>
+<li><p>数组通过元素的下标获取元素</p>
+<pre><code>(1) 取得第一个元素：数组名[0]
+(2) 取得最后一个元素：数组名[数组名.length-1]</code></pre></li>
+<li><p>数组的优点：查找效率高</p>
+</li>
+<li><p>数组缺点：队医的增删元素效率低</p>
+</li>
+<li><p>以下是数组的内存图（省略了方法区内存）<br><img src="/" alt="arry.png" class="lazyload" data-src="/2020/03/27/Java%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84%E8%AF%A6%E8%A7%A3/arry.png"></p>
+</li>
+</ol>
+<h3 id="注意：有100个元素的数组和有10000个元素的数组查找数据的效率是差不多的"><a href="#注意：有100个元素的数组和有10000个元素的数组查找数据的效率是差不多的" class="headerlink" title="注意：有100个元素的数组和有10000个元素的数组查找数据的效率是差不多的"></a>注意：有100个元素的数组和有10000个元素的数组查找数据的效率是差不多的</h3><ol>
+<li>因为 数组存储的数据类型都是一样的，内存空间大小也就一样，然后数组的存储又是有顺序的，所以只要知道第一个元素的内存地址和下标，在知道要查找元素的下标，在用下标计算出和第一个元素的偏移量，在由某个算法用偏移量就可以计算出要查找的数据的内存地址，然后就可以直接通过内存地址定位到那个元素</li>
+</ol>
+<h2 id="动态初始化一维数组"><a href="#动态初始化一维数组" class="headerlink" title="动态初始化一维数组"></a>动态初始化一维数组</h2><pre><code>1. 语法
     int[] a1 = new int[4];
         动态申明一个一维数组最多可以存储4个元素
         动态初始化一维数组，会在堆内存中先创建这个数组的内存，然后值都采用默认值
@@ -108,7 +117,7 @@ for(i=0;i&lt;a1.length;i++){ System.out.println(a1[i]); }</code></pre><h4 id="�
         char \u0000
         引用 null</code></pre><h2 id="什么时候用静态初始化，什么时候用动态初始化"><a href="#什么时候用静态初始化，什么时候用动态初始化" class="headerlink" title="什么时候用静态初始化，什么时候用动态初始化"></a>什么时候用静态初始化，什么时候用动态初始化</h2><pre><code>1. 无论是静态初始化还是动态初始化，最终的内存分布都是一样的。
 2. 如果在创建数组的时候，知道数组中应该存储哪些数据，这个时候当然采用静态初始化方式。
-3. 如果在创建数组的时候，不知道数组中要存储哪些数据，只要先开辟空间，则使用动态初始化方式</code></pre></div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">BoNiu</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://lvpika.github.io/2020/03/27/Java%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84%E8%AF%A6%E8%A7%A3/">http://lvpika.github.io/2020/03/27/Java%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84%E8%AF%A6%E8%A7%A3/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://lvpika.github.io" target="_blank">CatLoveFish</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Java/">Java    </a><a class="post-meta__tags" href="/tags/%E6%95%B0%E7%BB%84/">数组    </a></div><div class="post_share"><div class="social-share" data-image="/img/post1.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button button--primary button--animated"> <i class="fa fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/wechat.jpg" alt="微信"/><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/alipay.jpg" alt="支付宝"/><div class="post-qr-code__desc">支付宝</div></li><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/qqpay.jpg" alt="QQ"/><div class="post-qr-code__desc">QQ</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="next-post pull-full"><a href="/2020/03/25/%E8%AF%81%E4%B9%A6%E7%9A%84%E6%9C%89%E6%95%88%E6%80%A7%E8%AE%A4%E8%AF%81%E5%8E%9F%E7%90%86/"><img class="next_cover lazyload" data-src="/img/post4.png" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">证书的有效性认证原理</div></div></a></div></nav><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> 评论</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var GUEST_INFO = ['nick','mail','link'];
+3. 如果在创建数组的时候，不知道数组中要存储哪些数据，只要先开辟空间，则使用动态初始化方式</code></pre></div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">BoNiu</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://lvpika.github.io/2020/03/27/Java%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84%E8%AF%A6%E8%A7%A3/">http://lvpika.github.io/2020/03/27/Java%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84%E8%AF%A6%E8%A7%A3/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://lvpika.github.io" target="_blank">CatLoveFish</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Java/">Java    </a><a class="post-meta__tags" href="/tags/%E6%95%B0%E7%BB%84/">数组    </a></div><div class="post_share"><div class="social-share" data-image="/img/post1.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button button--primary button--animated"> <i class="fa fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/wechat.jpg" alt="微信"/><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/alipay.jpg" alt="支付宝"/><div class="post-qr-code__desc">支付宝</div></li><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/qqpay.jpg" alt="QQ"/><div class="post-qr-code__desc">QQ</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="next-post pull-full"><a href="/2020/03/25/%E8%AF%81%E4%B9%A6%E7%9A%84%E6%9C%89%E6%95%88%E6%80%A7%E8%AE%A4%E8%AF%81%E5%8E%9F%E7%90%86/"><img class="next_cover lazyload" data-src="/img/post2.png" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">证书的有效性认证原理</div></div></a></div></nav><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> 评论</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var GUEST_INFO = ['nick','mail','link'];
 var guest_info = 'nick,mail,link'.split(',').filter(function(item){
   return GUEST_INFO.indexOf(item) > -1
 });
