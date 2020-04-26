@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lvpika.github.io/"/>
-  <updated>2020-03-27T14:07:26.338Z</updated>
+  <updated>2020-04-26T13:20:32.606Z</updated>
   <id>http://lvpika.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解决将博客搭建在服务器上访问文章出现404错误码</title>
+    <link href="http://lvpika.github.io/2020/04/26/undefined/"/>
+    <id>http://lvpika.github.io/2020/04/26/undefined/</id>
+    <published>2020-04-26T13:19:31.000Z</published>
+    <updated>2020-04-26T13:20:32.606Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="博客解决url不支持中文的问题"><a href="#博客解决url不支持中文的问题" class="headerlink" title="博客解决url不支持中文的问题"></a>博客解决url不支持中文的问题</h4><p>把博客发布在服务器上时，很有可能遇到点击阅读文章时发现出现404错误码<br>这时候大多数可以看到浏览器地址栏中的url中含有中文，这时候就可能是你的服务器不支持中文url，所以需要在博客配置文件中做以下配置</p><p>在博客主目录的主配置文件中搜索 “permalink”可以看到它的键值默认是<br><code>year/:month/:day/:title/</code><br>将最后面的title改成time即可</p><p>原理就是一般博客文章的url连接都是日期加上文章标题，但是作为中国人，文章标题中含有中文那是肯定的，所以在访问文章的时候会出现404所以将url改为日期加上时间戳即可。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;博客解决url不支持中文的问题&quot;&gt;&lt;a href=&quot;#博客解决url不支持中文的问题&quot; class=&quot;headerlink&quot; title=&quot;博客解决url不支持中文的问题&quot;&gt;&lt;/a&gt;博客解决url不支持中文的问题&lt;/h4&gt;&lt;p&gt;把博客发布在服务器上时，很有可能遇到
+      
+    
+    </summary>
+    
+    
+      <category term="博客" scheme="http://lvpika.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="博客" scheme="http://lvpika.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>Java一维数组详解</title>
